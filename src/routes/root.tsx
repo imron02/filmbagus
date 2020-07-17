@@ -6,6 +6,7 @@ import { RootStackParamList } from './types';
 import { SplashScreen } from '../features/splash/screens/splash_screen';
 import { ScreenName } from '../utils/constant';
 import { AuthScreen } from '../features/auth/screens/auth_screen';
+import { DashboardScreen } from '../features/dashboard/screens/dashboard_screen';
 
 enableScreens();
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -19,6 +20,10 @@ const root = () => {
       }}>
       <Stack.Screen name={ScreenName.splashScreen} component={SplashScreen} />
       <Stack.Screen name={ScreenName.authScreen} component={AuthScreen} />
+      <Stack.Screen
+        name={ScreenName.dashboardScreen}
+        component={DashboardScreen}
+      />
     </Stack.Navigator>
   );
 };

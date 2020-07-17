@@ -9,9 +9,22 @@ import {
 import { TextInput, Button } from 'react-native-paper';
 
 import { styles, spacer } from '../styles/auth_style';
+import { AuthScreenProps } from '../../../routes/types';
+import { ScreenName } from '../../../utils/constant';
 import images from '../../../utils/images';
 
-const AuthScreen = () => {
+const AuthScreen = ({ navigation }: AuthScreenProps) => {
+  const goToDashboard = () => {
+    navigation.reset({
+      index: 0,
+      routes: [
+        {
+          name: ScreenName.dashboardScreen
+        }
+      ]
+    });
+  };
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -45,7 +58,8 @@ const AuthScreen = () => {
         <Button
           mode="contained"
           style={styles.btnLogin}
-          contentStyle={styles.button}>
+          contentStyle={styles.button}
+          onPress={goToDashboard}>
           Log in
         </Button>
         <View style={spacer(16).space} />

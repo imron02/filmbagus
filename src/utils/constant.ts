@@ -1,4 +1,7 @@
 export enum ScreenName {
   splashScreen = 'SplashScreen',
-  authScreen = 'AuthScreen'
+  authScreen = 'AuthScreen',
+  dashboardScreen = 'DashboardScreen',
+  homeScreen = 'HomeScreen',
+  searchScreen = 'SearchScreen'
 }
