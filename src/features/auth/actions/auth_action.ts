@@ -36,16 +36,19 @@ export const createLoginSessionReguest = (
 
   try {
     const token = await client.get(URL.requestToken);
-    const response = await client.post(URL.login, {
+    const login = await client.post(URL.login, {
       username,
       password,
       request_token: token?.data?.request_token
+    });
+    const response = await client.post(URL.createSession, {
+      request_token: login?.data?.request_token
     });
 
     if (response.status === 200 && response?.data?.success) {
       dispatch({
         type: ActionType.VALIDATE_LOGIN_SUCCESS,
-        payload: response?.data
+        payload: { ...login?.data, ...response?.data }
       });
     } else {
       dispatch({

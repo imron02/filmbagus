@@ -37,6 +37,12 @@ export type AuthScreenProps = StackScreenProps<
 
 interface ProfileDispatchProps {
   logout: () => void;
+  getAccount: () => void;
+  loading: boolean;
+  errorMessage: string;
+  success: boolean;
+  avatar: string;
+  username: string;
 }
 
 export type ProfileScreenProps = StackScreenProps<

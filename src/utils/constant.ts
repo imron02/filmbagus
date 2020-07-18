@@ -19,7 +19,9 @@ export const ApiConfig = {
 export const URL = {
   guest: '/authentication/guest_session/new',
   requestToken: '/authentication/token/new',
-  login: '/authentication/token/validate_with_login'
+  login: '/authentication/token/validate_with_login',
+  createSession: '/authentication/session/new',
+  account: '/account'
 };
 
 export const ActionType = {
@@ -29,5 +31,8 @@ export const ActionType = {
   LOGOUT: 'LOGOUT',
   VALIDATE_LOGIN_REQUEST: 'VALIDATE_LOGIN_REQUEST',
   VALIDATE_LOGIN_SUCCESS: 'VALIDATE_LOGIN_SUCCESS',
-  VALIDATE_LOGIN_FAILURE: 'VALIDATE_LOGIN_FAILURE'
+  VALIDATE_LOGIN_FAILURE: 'VALIDATE_LOGIN_FAILURE',
+  ACCOUNT_REQUEST: 'ACCOUNT_REQUEST',
+  ACCOUNT_REQUEST_SUCESS: 'ACCOUNT_REQUEST_SUCESS',
+  ACCOUNT_REQUEST_FAILURE: 'ACCOUNT_REQUEST_FAILURE'
 };

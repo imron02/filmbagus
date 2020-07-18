@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
-import { Button } from 'react-native-paper';
+import { Button, ActivityIndicator, Avatar } from 'react-native-paper';
 
 import { styles } from '../styles/profile_style';
 import { AppBarComponent } from '../../../components/app_bar/app_bar_component';
 import { ProfileScreenProps } from '../../../routes/types';
 import { ScreenName } from '../../../utils/constant';
+import ResponsiveScreen from '../../../utils/responsive';
 
-const ProfileScreen = ({ navigation, logout }: ProfileScreenProps) => {
+const ProfileScreen = (props: ProfileScreenProps) => {
+  const { navigation, logout, getAccount, loading, username, avatar } = props;
+
+  useEffect(() => {
+    getAccount();
+  }, []);
+
   const onLogout = () => {
     logout();
     navigation.reset({
@@ -20,11 +27,27 @@ const ProfileScreen = ({ navigation, logout }: ProfileScreenProps) => {
     });
   };
 
+  if (loading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator />
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <AppBarComponent title="Profile" />
-      <Text>Profile</Text>
-      <Button onPress={onLogout}>Sign Out</Button>
+      <View style={styles.profileContainer}>
+        <Avatar.Image
+          size={ResponsiveScreen.normalize(41)}
+          source={{ uri: `http://gravatar.com/avatar/${avatar}` }}
+        />
+        <Text style={styles.username}>{username}</Text>
+      </View>
+      <Button onPress={onLogout} mode="contained" style={styles.button}>
+        Sign Out
+      </Button>
     </View>
   );
 };

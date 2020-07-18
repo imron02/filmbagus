@@ -10,7 +10,7 @@ const middleWares = [thunk];
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['authReducer']
+  whitelist: ['authReducer', 'accountReducer']
 };
 
 const persistedReducer = persistReducer(persistConfig, combineReducers);
@@ -20,8 +20,12 @@ if (process.env.NODE_ENV === 'development') {
   middleWares.push(logger);
 }
 
+export const store = createStore(
+  persistedReducer,
+  applyMiddleware(...middleWares)
+);
+
 export default () => {
-  let store = createStore(persistedReducer, applyMiddleware(...middleWares));
   let persistor = persistStore(store);
   return { store, persistor };
 };

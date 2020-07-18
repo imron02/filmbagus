@@ -7,6 +7,7 @@ const initialState = {
   success: false,
   error: '',
   guest_session_id: '',
+  session_id: '',
   expires_at: '',
   type: ''
 };
