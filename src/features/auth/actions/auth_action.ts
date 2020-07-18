@@ -2,7 +2,7 @@ import { ActionType, URL } from '../../../utils/constant';
 import { AppThunk } from '../../../redux/combine_reducers';
 import client from '../../../utils/service';
 
-export const createGuestSessionRequest: AppThunk = async (dispatch) => {
+export const createGuestSessionRequest = (): AppThunk => async (dispatch) => {
   dispatch({ type: ActionType.CREATE_GUEST_SESSION_REQUEST });
 
   try {
@@ -21,7 +21,44 @@ export const createGuestSessionRequest: AppThunk = async (dispatch) => {
   } catch (error) {
     dispatch({
       type: ActionType.CREATE_GUEST_SESSION_FAILURE,
-      error: error?.response?.message ?? 'Failed request'
+      payload: {
+        error: error?.response?.data?.status_message ?? 'Failed request'
+      }
+    });
+  }
+};
+
+export const createLoginSessionReguest = (
+  username: string,
+  password: string
+): AppThunk => async (dispatch) => {
+  dispatch({ type: ActionType.VALIDATE_LOGIN_REQUEST });
+
+  try {
+    const token = await client.get(URL.requestToken);
+    const response = await client.post(URL.login, {
+      username,
+      password,
+      request_token: token?.data?.request_token
+    });
+
+    if (response.status === 200 && response?.data?.success) {
+      dispatch({
+        type: ActionType.VALIDATE_LOGIN_SUCCESS,
+        payload: response?.data
+      });
+    } else {
+      dispatch({
+        type: ActionType.VALIDATE_LOGIN_FAILURE,
+        payload: response?.data
+      });
+    }
+  } catch (error) {
+    dispatch({
+      type: ActionType.VALIDATE_LOGIN_FAILURE,
+      payload: {
+        error: error?.response?.data?.status_message ?? 'Failed request'
+      }
     });
   }
 };

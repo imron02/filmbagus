@@ -4,7 +4,8 @@ import {
   Image,
   Text,
   Platform,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
+  Alert
 } from 'react-native';
 import { TextInput, Button, HelperText } from 'react-native-paper';
 
@@ -21,8 +22,12 @@ interface IErrInput {
 const AuthScreen = ({
   navigation,
   createGuestSessionRequest,
-  loading,
-  isAuthenticated
+  createLoginSessionReguest,
+  loadingGuest,
+  loadingLogin,
+  isAuthenticated,
+  errorMessage,
+  success
 }: AuthScreenProps) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -54,16 +59,11 @@ const AuthScreen = ({
     setErrInput(errorInput);
   }, [username, password]);
 
-  const goToDashboard = () => {
-    navigation.reset({
-      index: 0,
-      routes: [
-        {
-          name: ScreenName.dashboardScreen
-        }
-      ]
-    });
-  };
+  useEffect(() => {
+    if (!success && errorMessage) {
+      Alert.alert(errorMessage);
+    }
+  }, [errorMessage, success]);
 
   const onGuest = () => {
     createGuestSessionRequest();
@@ -94,7 +94,7 @@ const AuthScreen = ({
   const onLogin = () => {
     const valid = validateOnPressLogin();
     if (valid) {
-      goToDashboard();
+      createLoginSessionReguest(username, password);
     }
   };
 
@@ -147,14 +147,15 @@ const AuthScreen = ({
           uppercase={false}
           color="#90cea1"
           onPress={onGuest}
-          loading={loading}>
+          loading={loadingGuest}>
           Continue as Guest
         </Button>
         <Button
           mode="contained"
           style={styles.btnLogin}
           contentStyle={styles.button}
-          onPress={onLogin}>
+          onPress={onLogin}
+          loading={loadingLogin}>
           Log in
         </Button>
         <View style={spacer(16).space} />

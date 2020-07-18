@@ -21,8 +21,12 @@ export type SplashScreenProps = StackScreenProps<
 
 interface AuthDispatchProps {
   createGuestSessionRequest: () => void;
-  loading: boolean;
+  createLoginSessionReguest: (username: string, password: string) => void;
+  loadingGuest: boolean;
+  loadingLogin: boolean;
   isAuthenticated: boolean;
+  errorMessage: string;
+  success: boolean;
 }
 
 export type AuthScreenProps = StackScreenProps<
