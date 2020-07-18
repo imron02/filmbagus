@@ -35,16 +35,31 @@ const ProfileScreen = (props: ProfileScreenProps) => {
     );
   }
 
+  const renderAvatar = () => {
+    if (username) {
+      return (
+        <>
+          <Avatar.Image
+            size={ResponsiveScreen.normalize(41)}
+            source={{ uri: `http://gravatar.com/avatar/${avatar}` }}
+          />
+          <Text style={styles.username}>{username}</Text>
+        </>
+      );
+    }
+
+    return (
+      <>
+        <Avatar.Text size={ResponsiveScreen.normalize(41)} label="G" />
+        <Text style={styles.username}>Guest</Text>
+      </>
+    );
+  };
+
   return (
     <View style={styles.container}>
       <AppBarComponent title="Profile" />
-      <View style={styles.profileContainer}>
-        <Avatar.Image
-          size={ResponsiveScreen.normalize(41)}
-          source={{ uri: `http://gravatar.com/avatar/${avatar}` }}
-        />
-        <Text style={styles.username}>{username}</Text>
-      </View>
+      <View style={styles.profileContainer}>{renderAvatar()}</View>
       <Button onPress={onLogout} mode="contained" style={styles.button}>
         Sign Out
       </Button>

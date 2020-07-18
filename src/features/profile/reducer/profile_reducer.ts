@@ -47,10 +47,8 @@ export const accountReducer = (
       };
     case ActionType.ACCOUNT_REQUEST_FAILURE:
       return {
-        ...state,
-        ...action.payload,
-        loading: false,
-        success: false
+        ...initialState,
+        ...action.payload
       };
     default:
       return state;
