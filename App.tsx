@@ -14,6 +14,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import getStore from './src/redux/store';
 import RootNavigation from './src/routes/root';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const { store, persistor } = getStore();
 
@@ -40,6 +41,17 @@ const App = () => {
         </PaperProvider>
       </PersistGate>
     </Provider>
+  );
+};
+
+const Stack = createStackNavigator();
+export const MockedNavigator = ({ component }: { component: any }) => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="MockedScreen" component={component} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

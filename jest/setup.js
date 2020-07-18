@@ -1,3 +1,4 @@
+/* eslint-disable no-labels */
 /* eslint-disable no-undef */
 import 'react-native-gesture-handler/jestSetup';
 
@@ -26,6 +27,17 @@ jest.mock('react-native-safe-area-context', () => {
       return {
         bottom: 0
       };
+    }
+  };
+});
+
+jest.mock('@react-navigation/native', () => {
+  const actualNav = jest.requireActual('@react-navigation/native');
+  return {
+    ...actualNav,
+    useFocusEffect: () => jest.fn(),
+    useNavigation: () => {
+      navigation: () => jest.fn();
     }
   };
 });
