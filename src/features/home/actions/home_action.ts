@@ -103,3 +103,35 @@ export const getNowPlayingMovie = (page: number): AppThunk => async (
     });
   }
 };
+
+export const getPopularMovie = (page: number): AppThunk => async (dispatch) => {
+  dispatch({ type: ActionType.POPULAR_MOVIE_REQUEST });
+
+  try {
+    const response = await client.get(URL.popularMovie, {
+      params: {
+        language: 'en-US',
+        page,
+        region: 'id'
+      }
+    });
+    if (response.status === 200) {
+      dispatch({
+        type: ActionType.POPULAR_MOVIE_SUCCESS,
+        payload: response?.data
+      });
+    } else {
+      dispatch({
+        type: ActionType.POPULAR_MOVIE_FAILURE,
+        payload: response?.data
+      });
+    }
+  } catch (error) {
+    dispatch({
+      type: ActionType.POPULAR_MOVIE_FAILURE,
+      payload: {
+        error: error?.response?.data?.status_message ?? 'Failed request'
+      }
+    });
+  }
+};

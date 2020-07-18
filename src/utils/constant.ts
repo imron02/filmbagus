@@ -24,7 +24,8 @@ export const URL = {
   account: '/account',
   topRateMovie: '/movie/top_rated',
   upcomingMovie: '/movie/upcoming',
-  nowPlayingMovie: '/movie/now_playing'
+  nowPlayingMovie: '/movie/now_playing',
+  popularMovie: '/movie/popular'
 };
 
 export const ActionType = {
@@ -46,5 +47,8 @@ export const ActionType = {
   UPCOMING_MOVIE_FAILURE: 'UPCOMING_MOVIE_FAILURE',
   NOW_PLAYING_MOVIE_REQUEST: 'NOW_PLAYING_MOVIE_REQUEST',
   NOW_PLAYING_MOVIE_SUCCESS: 'NOW_PLAYING_MOVIE_SUCCESS',
-  NOW_PLAYING_MOVIE_FAILURE: 'UPCOMING_MOVIE_FAILURE'
+  NOW_PLAYING_MOVIE_FAILURE: 'NOW_PLAYING_MOVIE_FAILURE',
+  POPULAR_MOVIE_REQUEST: 'POPULAR_MOVIE_REQUEST',
+  POPULAR_MOVIE_SUCCESS: 'POPULAR_MOVIE_SUCCESS',
+  POPULAR_MOVIE_FAILURE: 'POPULAR_MOVIE_FAILURE'
 };

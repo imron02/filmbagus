@@ -19,13 +19,17 @@ const HomeScreen = (props: HomeScreenProps) => {
     loadingUpcomingMovies,
     getNowPlayingMovie,
     nowPlayingMovies,
-    loadingNowPlayingMovies
+    loadingNowPlayingMovies,
+    getPopularMovie,
+    popularMovies,
+    loadingPopularMovies
   } = props;
 
   useEffect(() => {
     getTopRatedMovie(1);
     getUpcomingMovie(1);
     getNowPlayingMovie(1);
+    getPopularMovie(1);
   }, []);
 
   const renderItem = ({ item }: { item: MovieType }) => {
@@ -75,12 +79,19 @@ const HomeScreen = (props: HomeScreenProps) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <AppBarComponent title="Browse" />
-      {movies('Top Rated Movies', loadingTopRatedMovies, topRatedMovies)}
-      {movies('Upcoming Movies', loadingUpcomingMovies, upcomingMovies)}
-      {movies('Now Playing Movies', loadingNowPlayingMovies, nowPlayingMovies)}
-    </ScrollView>
+      <ScrollView>
+        {movies('Top Rated Movies', loadingTopRatedMovies, topRatedMovies)}
+        {movies('Upcoming Movies', loadingUpcomingMovies, upcomingMovies)}
+        {movies(
+          'Now Playing Movies',
+          loadingNowPlayingMovies,
+          nowPlayingMovies
+        )}
+        {movies('Popular Movies', loadingPopularMovies, popularMovies)}
+      </ScrollView>
+    </View>
   );
 };
 
