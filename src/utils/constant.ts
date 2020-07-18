@@ -6,7 +6,8 @@ export enum ScreenName {
   dashboardScreen = 'DashboardScreen',
   homeScreen = 'HomeScreen',
   searchScreen = 'SearchScreen',
-  profileScreen = 'ProfileScreen'
+  profileScreen = 'ProfileScreen',
+  movieScreen = 'MovieScreen'
 }
 
 export const ApiConfig = {

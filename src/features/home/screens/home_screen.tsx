@@ -1,12 +1,18 @@
 import React, { useEffect } from 'react';
-import { ScrollView, View, FlatList, Text } from 'react-native';
+import {
+  ScrollView,
+  View,
+  FlatList,
+  Text,
+  TouchableOpacity
+} from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import FastImage from 'react-native-fast-image';
 
 import { styles } from '../styles/home_style';
 import { AppBarComponent } from '../../../components/app_bar/app_bar_component';
 import { HomeScreenProps } from 'src/routes/types';
-import { ApiConfig } from '../../../utils/constant';
+import { ApiConfig, ScreenName } from '../../../utils/constant';
 import { MovieType } from '../reducers/types';
 
 const HomeScreen = (props: HomeScreenProps) => {
@@ -22,7 +28,8 @@ const HomeScreen = (props: HomeScreenProps) => {
     loadingNowPlayingMovies,
     getPopularMovie,
     popularMovies,
-    loadingPopularMovies
+    loadingPopularMovies,
+    navigation
   } = props;
 
   useEffect(() => {
@@ -32,13 +39,19 @@ const HomeScreen = (props: HomeScreenProps) => {
     getPopularMovie(1);
   }, []);
 
+  const goToMovie = (item: MovieType) => () => {
+    navigation.navigate(ScreenName.movieScreen, {
+      item
+    });
+  };
+
   const renderItem = ({ item }: { item: MovieType }) => {
     if (!item.poster_path) {
       return null;
     }
 
     return (
-      <View style={styles.card}>
+      <TouchableOpacity style={styles.card} onPress={goToMovie(item)}>
         <FastImage
           style={styles.image}
           source={{
@@ -46,7 +59,7 @@ const HomeScreen = (props: HomeScreenProps) => {
           }}
           resizeMode={FastImage.resizeMode.contain}
         />
-      </View>
+      </TouchableOpacity>
     );
   };
 

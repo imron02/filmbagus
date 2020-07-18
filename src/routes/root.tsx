@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { RootStackParamList } from './types';
 import { ScreenName } from '../utils/constant';
 import { DashboardScreen } from '../features/dashboard/screens/dashboard_screen';
+import { MovieScreen } from '../features/movie/screens/movie_screen';
 import SplashScreen from '../features/splash/containers/splash_container';
 import AuthScreen from '../features/auth/containers/auth_container';
 
@@ -24,6 +25,7 @@ const root = () => {
         name={ScreenName.dashboardScreen}
         component={DashboardScreen}
       />
+      <Stack.Screen name={ScreenName.movieScreen} component={MovieScreen} />
     </Stack.Navigator>
   );
 };

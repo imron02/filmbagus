@@ -2,6 +2,7 @@ import { StackScreenProps } from '@react-navigation/stack';
 
 import { ScreenName } from '../utils/constant';
 import { MovieType } from 'src/features/home/reducers/types';
+import { RouteProp } from '@react-navigation/native';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
@@ -9,6 +10,7 @@ export type RootStackParamList = {
   DashboardScreen: undefined;
   ProfileScreen: undefined;
   HomeScreen: undefined;
+  MovieScreen: { item: MovieType };
 };
 
 interface SplashStateProps {
@@ -73,3 +75,12 @@ export type HomeScreenProps = StackScreenProps<
   ScreenName.homeScreen
 > &
   HomeDispatchProps;
+
+type MovieScreenRouteProp = RouteProp<
+  RootStackParamList,
+  ScreenName.movieScreen
+>;
+
+export type MovieScreenProps = {
+  route: MovieScreenRouteProp;
+};
