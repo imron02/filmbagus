@@ -3,10 +3,10 @@ import { enableScreens } from 'react-native-screens';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
 import { RootStackParamList } from './types';
-import { SplashScreen } from '../features/splash/screens/splash_screen';
 import { ScreenName } from '../utils/constant';
-import AuthScreen from '../features/auth/containers/auth_container';
 import { DashboardScreen } from '../features/dashboard/screens/dashboard_screen';
+import SplashScreen from '../features/splash/containers/splash_container';
+import AuthScreen from '../features/auth/containers/auth_container';
 
 enableScreens();
 const Stack = createNativeStackNavigator<RootStackParamList>();

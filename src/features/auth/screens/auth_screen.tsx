@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   Image,
@@ -15,8 +15,23 @@ import images from '../../../utils/images';
 
 const AuthScreen = ({
   navigation,
-  createGuestSessionRequest
+  createGuestSessionRequest,
+  loading,
+  isAuthenticated
 }: AuthScreenProps) => {
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigation.reset({
+        index: 0,
+        routes: [
+          {
+            name: ScreenName.dashboardScreen
+          }
+        ]
+      });
+    }
+  }, [isAuthenticated]);
+
   const goToDashboard = () => {
     navigation.reset({
       index: 0,
@@ -62,7 +77,11 @@ const AuthScreen = ({
           style={styles.input}
         />
         <View style={spacer(40).space} />
-        <Button uppercase={false} color="#90cea1" onPress={onGuest}>
+        <Button
+          uppercase={false}
+          color="#90cea1"
+          onPress={onGuest}
+          loading={loading}>
           Continue as Guest
         </Button>
         <Button

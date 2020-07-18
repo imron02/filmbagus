@@ -8,13 +8,20 @@ export type RootStackParamList = {
   DashboardScreen: undefined;
 };
 
+interface SplashStateProps {
+  isAuthenticated: boolean;
+}
+
 export type SplashScreenProps = StackScreenProps<
   RootStackParamList,
   ScreenName.splashScreen
->;
+> &
+  SplashStateProps;
 
 interface AuthDispatchProps {
   createGuestSessionRequest: () => void;
+  loading: boolean;
+  isAuthenticated: boolean;
 }
 
 export type AuthScreenProps = StackScreenProps<

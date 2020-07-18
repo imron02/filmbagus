@@ -4,7 +4,9 @@ const initialState = {
   isAuthenticated: false,
   loading: false,
   success: false,
-  error: ''
+  error: '',
+  guest_session_id: '',
+  expires_at: ''
 };
 
 type ActionType = {

@@ -9,7 +9,7 @@ import { ScreenName } from '../../../utils/constant';
 import { SplashScreenProps } from '../../../routes/types';
 import images from '../../../utils/images';
 
-const SplashScreen = ({ navigation }: SplashScreenProps) => {
+const SplashScreen = ({ navigation, isAuthenticated }: SplashScreenProps) => {
   useEffect(() => {
     StatusBar.setBarStyle('light-content');
     SplashScreens.hide();
@@ -18,11 +18,17 @@ const SplashScreen = ({ navigation }: SplashScreenProps) => {
 
   const redirect = async () => {
     await wait(2000);
+    let destinationScreen = ScreenName.authScreen;
+
+    if (isAuthenticated) {
+      destinationScreen = ScreenName.dashboardScreen;
+    }
+
     navigation.reset({
       index: 0,
       routes: [
         {
-          name: ScreenName.authScreen
+          name: destinationScreen
         }
       ]
     });
