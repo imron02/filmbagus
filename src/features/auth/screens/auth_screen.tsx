@@ -13,7 +13,10 @@ import { AuthScreenProps } from '../../../routes/types';
 import { ScreenName } from '../../../utils/constant';
 import images from '../../../utils/images';
 
-const AuthScreen = ({ navigation }: AuthScreenProps) => {
+const AuthScreen = ({
+  navigation,
+  createGuestSessionRequest
+}: AuthScreenProps) => {
   const goToDashboard = () => {
     navigation.reset({
       index: 0,
@@ -23,6 +26,10 @@ const AuthScreen = ({ navigation }: AuthScreenProps) => {
         }
       ]
     });
+  };
+
+  const onGuest = () => {
+    createGuestSessionRequest();
   };
 
   return (
@@ -55,6 +62,9 @@ const AuthScreen = ({ navigation }: AuthScreenProps) => {
           style={styles.input}
         />
         <View style={spacer(40).space} />
+        <Button uppercase={false} color="#90cea1" onPress={onGuest}>
+          Continue as Guest
+        </Button>
         <Button
           mode="contained"
           style={styles.btnLogin}

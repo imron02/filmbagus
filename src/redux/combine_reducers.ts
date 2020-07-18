@@ -1,4 +1,6 @@
-import { combineReducers } from 'redux';
+import { combineReducers, Action } from 'redux';
+import { authReducer } from '../features/auth/reducers/auth_reducer';
+import { ThunkAction } from 'redux-thunk';
 
 const initialState = {
   todos: []
@@ -18,6 +20,18 @@ function dummyReducer(state = initialState, action: any) {
   }
 }
 
-export default combineReducers({
-  dummyReducer
+const rootReducer = combineReducers({
+  dummyReducer,
+  authReducer
 });
+
+export type RootState = ReturnType<typeof rootReducer>;
+
+export type AppThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  RootState,
+  unknown,
+  Action<string>
+>;
+
+export default rootReducer;

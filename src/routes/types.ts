@@ -1,5 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import { ScreenName } from 'src/utils/constant';
+
+import { ScreenName } from '../utils/constant';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
@@ -12,7 +13,12 @@ export type SplashScreenProps = StackScreenProps<
   ScreenName.splashScreen
 >;
 
+interface AuthDispatchProps {
+  createGuestSessionRequest: () => void;
+}
+
 export type AuthScreenProps = StackScreenProps<
   RootStackParamList,
   ScreenName.authScreen
->;
+> &
+  AuthDispatchProps;

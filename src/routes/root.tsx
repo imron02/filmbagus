@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { RootStackParamList } from './types';
 import { SplashScreen } from '../features/splash/screens/splash_screen';
 import { ScreenName } from '../utils/constant';
-import { AuthScreen } from '../features/auth/screens/auth_screen';
+import AuthScreen from '../features/auth/containers/auth_container';
 import { DashboardScreen } from '../features/dashboard/screens/dashboard_screen';
 
 enableScreens();
