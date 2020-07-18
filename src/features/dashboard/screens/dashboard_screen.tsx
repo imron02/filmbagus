@@ -7,6 +7,7 @@ import { SearchScreen } from '../../search/screens/search_screen';
 import { ScreenName } from '../../../utils/constant';
 import HomeScreen from '../../home/containers/home_container';
 import ProfileScreen from '../../profile/conainers/profile_container';
+import ResponsiveScreen from '../../../utils/responsive';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -19,7 +20,11 @@ const DashboardScreen = () => {
         options={{
           tabBarLabel: 'Browse',
           tabBarIcon: ({ color }) => (
-            <Icon name="home" color={color} size={26} />
+            <Icon
+              name="home"
+              color={color}
+              size={ResponsiveScreen.normalize(26)}
+            />
           )
         }}
       />
@@ -29,7 +34,11 @@ const DashboardScreen = () => {
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color }) => (
-            <Icon name="image-search" color={color} size={26} />
+            <Icon
+              name="image-search"
+              color={color}
+              size={ResponsiveScreen.normalize(26)}
+            />
           )
         }}
       />
@@ -39,7 +48,11 @@ const DashboardScreen = () => {
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
-            <Icon name="account" color={color} size={26} />
+            <Icon
+              name="account"
+              color={color}
+              size={ResponsiveScreen.normalize(26)}
+            />
           )
         }}
       />
