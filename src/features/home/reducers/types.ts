@@ -14,3 +14,8 @@ export type MovieType = {
   overview: string;
   release_date: string;
 };
+
+export type GenreType = {
+  id: number;
+  name: string;
+};

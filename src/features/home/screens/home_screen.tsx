@@ -29,7 +29,8 @@ const HomeScreen = (props: HomeScreenProps) => {
     getPopularMovie,
     popularMovies,
     loadingPopularMovies,
-    navigation
+    navigation,
+    getMovieGenre
   } = props;
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const HomeScreen = (props: HomeScreenProps) => {
     getUpcomingMovie(1);
     getNowPlayingMovie(1);
     getPopularMovie(1);
+    getMovieGenre();
   }, []);
 
   const goToMovie = (item: MovieType) => () => {

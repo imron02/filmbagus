@@ -1,8 +1,8 @@
 import { StackScreenProps } from '@react-navigation/stack';
+import { RouteProp } from '@react-navigation/native';
 
 import { ScreenName } from '../utils/constant';
-import { MovieType } from 'src/features/home/reducers/types';
-import { RouteProp } from '@react-navigation/native';
+import { MovieType, GenreType } from '../features/home/reducers/types';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
@@ -68,6 +68,7 @@ interface HomeDispatchProps {
   getPopularMovie: (page: number) => void;
   loadingPopularMovies: boolean;
   popularMovies: MovieType[];
+  getMovieGenre: () => void;
 }
 
 export type HomeScreenProps = StackScreenProps<
@@ -83,4 +84,5 @@ type MovieScreenRouteProp = RouteProp<
 
 export type MovieScreenProps = {
   route: MovieScreenRouteProp;
+  genres: GenreType[];
 };

@@ -6,7 +6,8 @@ import {
   getTopRatedMovie,
   getUpcomingMovie,
   getNowPlayingMovie,
-  getPopularMovie
+  getPopularMovie,
+  getMovieGenre
 } from '../actions/home_action';
 
 const mapState = ({
@@ -29,7 +30,8 @@ const mapDispatch = (dispatch: AppDispatch) => ({
   getTopRatedMovie: (page: number) => dispatch(getTopRatedMovie(page)),
   getUpcomingMovie: (page: number) => dispatch(getUpcomingMovie(page)),
   getNowPlayingMovie: (page: number) => dispatch(getNowPlayingMovie(page)),
-  getPopularMovie: (page: number) => dispatch(getPopularMovie(page))
+  getPopularMovie: (page: number) => dispatch(getPopularMovie(page)),
+  getMovieGenre: () => dispatch(getMovieGenre())
 });
 
 export default connect(mapState, mapDispatch)(HomeScreen);

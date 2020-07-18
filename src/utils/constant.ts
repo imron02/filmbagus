@@ -26,7 +26,8 @@ export const URL = {
   topRateMovie: '/movie/top_rated',
   upcomingMovie: '/movie/upcoming',
   nowPlayingMovie: '/movie/now_playing',
-  popularMovie: '/movie/popular'
+  popularMovie: '/movie/popular',
+  movieGenre: '/genre/movie/list'
 };
 
 export const ActionType = {
@@ -51,5 +52,8 @@ export const ActionType = {
   NOW_PLAYING_MOVIE_FAILURE: 'NOW_PLAYING_MOVIE_FAILURE',
   POPULAR_MOVIE_REQUEST: 'POPULAR_MOVIE_REQUEST',
   POPULAR_MOVIE_SUCCESS: 'POPULAR_MOVIE_SUCCESS',
-  POPULAR_MOVIE_FAILURE: 'POPULAR_MOVIE_FAILURE'
+  POPULAR_MOVIE_FAILURE: 'POPULAR_MOVIE_FAILURE',
+  GENRE_MOVIE_REQUEST: 'GENRE_MOVIE_REQUEST',
+  GENRE_MOVIE_SUCCESS: 'GENRE_MOVIE_SUCCESS',
+  GENRE_MOVIE_FAILURE: 'GENRE_MOVIE_FAILURE'
 };

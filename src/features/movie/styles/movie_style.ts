@@ -29,13 +29,18 @@ const styles = StyleSheet.create({
   },
   vote: {
     fontSize: ResponsiveScreen.normalize(12),
+    color: '#01b4e4',
+    fontWeight: 'bold'
+  },
+  subtitle: {
     color: '#858585',
-    marginTop: 8
+    fontWeight: 'normal'
   },
   subtitleContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 8
   },
   overview: {
     fontSize: ResponsiveScreen.normalize(14),
@@ -43,5 +48,13 @@ const styles = StyleSheet.create({
     marginTop: 8
   }
 });
+
+export const spacer = (space: number) => {
+  return StyleSheet.create({
+    space: {
+      height: space
+    }
+  });
+};
 
 export { styles };
