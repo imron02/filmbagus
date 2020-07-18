@@ -30,7 +30,7 @@ const ProfileScreen = (props: ProfileScreenProps) => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator />
+        <ActivityIndicator color="#0d253f" />
       </View>
     );
   }

@@ -21,7 +21,8 @@ export const URL = {
   requestToken: '/authentication/token/new',
   login: '/authentication/token/validate_with_login',
   createSession: '/authentication/session/new',
-  account: '/account'
+  account: '/account',
+  topRateMovie: '/movie/top_rated'
 };
 
 export const ActionType = {
@@ -34,5 +35,8 @@ export const ActionType = {
   VALIDATE_LOGIN_FAILURE: 'VALIDATE_LOGIN_FAILURE',
   ACCOUNT_REQUEST: 'ACCOUNT_REQUEST',
   ACCOUNT_REQUEST_SUCESS: 'ACCOUNT_REQUEST_SUCESS',
-  ACCOUNT_REQUEST_FAILURE: 'ACCOUNT_REQUEST_FAILURE'
+  ACCOUNT_REQUEST_FAILURE: 'ACCOUNT_REQUEST_FAILURE',
+  TOP_RATE_MOVIE_REQUEST: 'TOP_RATE_MOVIE_REQUEST',
+  TOP_RATE_MOVIE_SUCCESS: 'TOP_RATE_MOVIE_SUCCESS',
+  TOP_RATE_MOVIE_FAILURE: 'TOP_RATE_MOVIE_FAILURE'
 };

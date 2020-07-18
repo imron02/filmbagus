@@ -11,6 +11,8 @@ let mockProps: any = { navigation: { navigate: jest.fn() } };
 
 const MySafeArea = React.createContext(null);
 
+jest.useFakeTimers();
+
 it('renders correctly', () => {
   renderer.create(
     <MySafeArea.Provider value={null}>

@@ -3,9 +3,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { styles } from '../styles/dashboard_style';
-import { HomeScreen } from '../../home/screen/home_screen';
 import { SearchScreen } from '../../search/screens/search_screen';
 import { ScreenName } from '../../../utils/constant';
+import HomeScreen from '../../home/containers/home_container';
 import ProfileScreen from '../../profile/conainers/profile_container';
 
 const Tab = createMaterialBottomTabNavigator();

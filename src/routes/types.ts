@@ -1,12 +1,14 @@
 import { StackScreenProps } from '@react-navigation/stack';
 
 import { ScreenName } from '../utils/constant';
+import { TopRateMovieDataType } from '../features/home/reducers/top_rated_movies_reducer';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
   AuthScreen: undefined;
   DashboardScreen: undefined;
   ProfileScreen: undefined;
+  HomeScreen: undefined;
 };
 
 interface SplashStateProps {
@@ -50,3 +52,19 @@ export type ProfileScreenProps = StackScreenProps<
   ScreenName.profileScreen
 > &
   ProfileDispatchProps;
+
+interface HomeDispatchProps {
+  getTopRatedMovie: (page: number) => void;
+  loadingTopRatedMovies: boolean;
+  errorMessage: string;
+  success: boolean;
+  page: number;
+  total_pages: number;
+  topRatedMovies: TopRateMovieDataType[];
+}
+
+export type HomeScreenProps = StackScreenProps<
+  RootStackParamList,
+  ScreenName.homeScreen
+> &
+  HomeDispatchProps;
