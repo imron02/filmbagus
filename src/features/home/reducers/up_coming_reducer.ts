@@ -25,26 +25,26 @@ const initialState = {
   results: []
 };
 
-export const topRateMovieReducer = (
+export const upcomingMovieReducer = (
   state = initialState,
   action: ActionType
 ) => {
   switch (action.type) {
-    case ActionType.TOP_RATE_MOVIE_REQUEST:
+    case ActionType.UPCOMING_MOVIE_REQUEST:
       return {
         ...state,
         loading: true,
         success: false,
         error: ''
       };
-    case ActionType.TOP_RATE_MOVIE_SUCCESS:
+    case ActionType.UPCOMING_MOVIE_SUCCESS:
       return {
         ...state,
         ...action.payload,
         loading: false,
         success: true
       };
-    case ActionType.TOP_RATE_MOVIE_FAILURE:
+    case ActionType.UPCOMING_MOVIE_FAILURE:
       return {
         ...state,
         ...action.payload,

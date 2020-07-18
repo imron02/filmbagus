@@ -4,11 +4,13 @@ import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { authReducer } from '../features/auth/reducers/auth_reducer';
 import { accountReducer } from '../features/profile/reducer/profile_reducer';
 import { topRateMovieReducer } from '../features/home/reducers/top_rated_movies_reducer';
+import { upcomingMovieReducer } from '../features/home/reducers/up_coming_reducer';
 
 const rootReducer = combineReducers({
   authReducer,
   accountReducer,
-  topRateMovieReducer
+  topRateMovieReducer,
+  upcomingMovieReducer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

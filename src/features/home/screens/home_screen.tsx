@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { View, FlatList, Text } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import FastImage from 'react-native-fast-image';
@@ -6,24 +6,29 @@ import FastImage from 'react-native-fast-image';
 import { styles } from '../styles/home_style';
 import { AppBarComponent } from '../../../components/app_bar/app_bar_component';
 import { HomeScreenProps } from 'src/routes/types';
-import { TopRateMovieDataType } from '../reducers/top_rated_movies_reducer';
 import { ApiConfig } from '../../../utils/constant';
+import { MovieType } from '../reducers/types';
 
 const HomeScreen = (props: HomeScreenProps) => {
   const {
     getTopRatedMovie,
-    success,
     topRatedMovies,
-    loadingTopRatedMovies
+    loadingTopRatedMovies,
+    getUpcomingMovie,
+    upcomingMovies,
+    loadingUpcomingMovies
   } = props;
 
-  const [page] = useState(1);
-
   useEffect(() => {
-    getTopRatedMovie(page);
+    getTopRatedMovie(1);
+    getUpcomingMovie(1);
   }, []);
 
-  const renderItem = ({ item }: { item: TopRateMovieDataType }) => {
+  const renderItem = ({ item }: { item: MovieType }) => {
+    if (!item.poster_path) {
+      return null;
+    }
+
     return (
       <View style={styles.card}>
         <FastImage
@@ -37,8 +42,8 @@ const HomeScreen = (props: HomeScreenProps) => {
     );
   };
 
-  const TopRatedMovies = () => {
-    if (loadingTopRatedMovies) {
+  const movies = (title: string, loading: boolean, data: MovieType[]) => {
+    if (loading) {
       return (
         <View style={styles.topRatedMoviews}>
           <View style={styles.loadingContainer}>
@@ -51,11 +56,11 @@ const HomeScreen = (props: HomeScreenProps) => {
     return (
       <View style={styles.topRatedMoviews}>
         <View style={styles.listHeader}>
-          <Text style={styles.title}>Top Rated Movies</Text>
+          <Text style={styles.title}>{title}</Text>
           <Text style={styles.more}>View all</Text>
         </View>
         <FlatList
-          data={topRatedMovies}
+          data={data}
           keyExtractor={(_, index) => index.toString()}
           renderItem={renderItem}
           style={styles.lists}
@@ -68,7 +73,8 @@ const HomeScreen = (props: HomeScreenProps) => {
   return (
     <View style={styles.container}>
       <AppBarComponent title="Browse" />
-      <TopRatedMovies />
+      {movies('Top Rated Movies', loadingTopRatedMovies, topRatedMovies)}
+      {movies('Upcoming Movies', loadingUpcomingMovies, upcomingMovies)}
     </View>
   );
 };
