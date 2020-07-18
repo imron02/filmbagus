@@ -60,6 +60,9 @@ interface HomeDispatchProps {
   getUpcomingMovie: (page: number) => void;
   loadingUpcomingMovies: boolean;
   upcomingMovies: MovieType[];
+  getNowPlayingMovie: (page: number) => void;
+  loadingNowPlayingMovies: boolean;
+  nowPlayingMovies: MovieType[];
 }
 
 export type HomeScreenProps = StackScreenProps<

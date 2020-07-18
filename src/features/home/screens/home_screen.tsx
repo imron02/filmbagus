@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, FlatList, Text } from 'react-native';
+import { ScrollView, View, FlatList, Text } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import FastImage from 'react-native-fast-image';
 
@@ -16,12 +16,16 @@ const HomeScreen = (props: HomeScreenProps) => {
     loadingTopRatedMovies,
     getUpcomingMovie,
     upcomingMovies,
-    loadingUpcomingMovies
+    loadingUpcomingMovies,
+    getNowPlayingMovie,
+    nowPlayingMovies,
+    loadingNowPlayingMovies
   } = props;
 
   useEffect(() => {
     getTopRatedMovie(1);
     getUpcomingMovie(1);
+    getNowPlayingMovie(1);
   }, []);
 
   const renderItem = ({ item }: { item: MovieType }) => {
@@ -71,11 +75,12 @@ const HomeScreen = (props: HomeScreenProps) => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <AppBarComponent title="Browse" />
       {movies('Top Rated Movies', loadingTopRatedMovies, topRatedMovies)}
       {movies('Upcoming Movies', loadingUpcomingMovies, upcomingMovies)}
-    </View>
+      {movies('Now Playing Movies', loadingNowPlayingMovies, nowPlayingMovies)}
+    </ScrollView>
   );
 };
 

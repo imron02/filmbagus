@@ -5,12 +5,14 @@ import { authReducer } from '../features/auth/reducers/auth_reducer';
 import { accountReducer } from '../features/profile/reducer/profile_reducer';
 import { topRateMovieReducer } from '../features/home/reducers/top_rated_movies_reducer';
 import { upcomingMovieReducer } from '../features/home/reducers/up_coming_reducer';
+import { nowPlayingMovieReducer } from '../features/home/reducers/now_playing_reducer';
 
 const rootReducer = combineReducers({
   authReducer,
   accountReducer,
   topRateMovieReducer,
-  upcomingMovieReducer
+  upcomingMovieReducer,
+  nowPlayingMovieReducer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

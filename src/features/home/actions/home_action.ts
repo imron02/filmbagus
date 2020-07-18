@@ -69,3 +69,37 @@ export const getUpcomingMovie = (page: number): AppThunk => async (
     });
   }
 };
+
+export const getNowPlayingMovie = (page: number): AppThunk => async (
+  dispatch
+) => {
+  dispatch({ type: ActionType.NOW_PLAYING_MOVIE_REQUEST });
+
+  try {
+    const response = await client.get(URL.nowPlayingMovie, {
+      params: {
+        language: 'en-US',
+        page,
+        region: 'id'
+      }
+    });
+    if (response.status === 200) {
+      dispatch({
+        type: ActionType.NOW_PLAYING_MOVIE_SUCCESS,
+        payload: response?.data
+      });
+    } else {
+      dispatch({
+        type: ActionType.NOW_PLAYING_MOVIE_FAILURE,
+        payload: response?.data
+      });
+    }
+  } catch (error) {
+    dispatch({
+      type: ActionType.NOW_PLAYING_MOVIE_FAILURE,
+      payload: {
+        error: error?.response?.data?.status_message ?? 'Failed request'
+      }
+    });
+  }
+};

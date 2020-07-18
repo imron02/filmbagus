@@ -23,7 +23,8 @@ export const URL = {
   createSession: '/authentication/session/new',
   account: '/account',
   topRateMovie: '/movie/top_rated',
-  upcomingMovie: '/movie/upcoming'
+  upcomingMovie: '/movie/upcoming',
+  nowPlayingMovie: '/movie/now_playing'
 };
 
 export const ActionType = {
@@ -42,5 +43,8 @@ export const ActionType = {
   TOP_RATE_MOVIE_FAILURE: 'TOP_RATE_MOVIE_FAILURE',
   UPCOMING_MOVIE_REQUEST: 'UPCOMING_MOVIE_REQUEST',
   UPCOMING_MOVIE_SUCCESS: 'UPCOMING_MOVIE_SUCCESS',
-  UPCOMING_MOVIE_FAILURE: 'UPCOMING_MOVIE_FAILURE'
+  UPCOMING_MOVIE_FAILURE: 'UPCOMING_MOVIE_FAILURE',
+  NOW_PLAYING_MOVIE_REQUEST: 'NOW_PLAYING_MOVIE_REQUEST',
+  NOW_PLAYING_MOVIE_SUCCESS: 'NOW_PLAYING_MOVIE_SUCCESS',
+  NOW_PLAYING_MOVIE_FAILURE: 'UPCOMING_MOVIE_FAILURE'
 };
