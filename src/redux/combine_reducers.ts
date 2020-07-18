@@ -1,6 +1,6 @@
 import { combineReducers, Action } from 'redux';
 import { authReducer } from '../features/auth/reducers/auth_reducer';
-import { ThunkAction } from 'redux-thunk';
+import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
 const initialState = {
   todos: []
@@ -33,5 +33,7 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
+
+export type AppDispatch = ThunkDispatch<RootState, void, Action>;
 
 export default rootReducer;

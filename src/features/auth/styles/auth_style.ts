@@ -40,6 +40,9 @@ const styles = StyleSheet.create({
   btnSignUp: {
     borderColor: '#90cea1',
     borderWidth: 1
+  },
+  errMessage: {
+    color: '#90cea1'
   }
 });
 

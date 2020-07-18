@@ -6,6 +6,7 @@ export type RootStackParamList = {
   SplashScreen: undefined;
   AuthScreen: undefined;
   DashboardScreen: undefined;
+  ProfileScreen: undefined;
 };
 
 interface SplashStateProps {
@@ -29,3 +30,13 @@ export type AuthScreenProps = StackScreenProps<
   ScreenName.authScreen
 > &
   AuthDispatchProps;
+
+interface ProfileDispatchProps {
+  logout: () => void;
+}
+
+export type ProfileScreenProps = StackScreenProps<
+  RootStackParamList,
+  ScreenName.profileScreen
+> &
+  ProfileDispatchProps;

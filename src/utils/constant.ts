@@ -5,7 +5,8 @@ export enum ScreenName {
   authScreen = 'AuthScreen',
   dashboardScreen = 'DashboardScreen',
   homeScreen = 'HomeScreen',
-  searchScreen = 'SearchScreen'
+  searchScreen = 'SearchScreen',
+  profileScreen = 'ProfileScreen'
 }
 
 export const ApiConfig = {
@@ -22,5 +23,6 @@ export const URL = {
 export const ActionType = {
   CREATE_GUEST_SESSION_REQUEST: 'CREATE_GUEST_SESSION_REQUEST',
   CREATE_GUEST_SESSION_SUCCESS: 'CREATE_GUEST_SESSION_SUCCESS',
-  CREATE_GUEST_SESSION_FAILURE: 'CREATE_GUEST_SESSION_FAILURE'
+  CREATE_GUEST_SESSION_FAILURE: 'CREATE_GUEST_SESSION_FAILURE',
+  LOGOUT: 'LOGOUT'
 };

@@ -1,4 +1,11 @@
+/* eslint-disable no-undef */
 import 'react-native-gesture-handler/jestSetup';
+
+jest.mock('react-native-screens', () => {
+  const RealComponent = jest.requireActual('react-native-screens');
+  RealComponent.enableScreens = function () {};
+  return RealComponent;
+});
 
 jest.mock('react-native-reanimated', () => {
   const Reanimated = require('react-native-reanimated/mock');
@@ -12,3 +19,13 @@ jest.mock('react-native-reanimated', () => {
 
 // Silence the warning: Animated: `useNativeDriver` is not supported because the native animated module is missing
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+
+jest.mock('react-native-safe-area-context', () => {
+  return {
+    useSafeArea: () => {
+      return {
+        bottom: 0
+      };
+    }
+  };
+});

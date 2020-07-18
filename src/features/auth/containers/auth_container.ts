@@ -1,10 +1,8 @@
 import { connect } from 'react-redux';
-import { Action } from 'redux';
 
 import { createGuestSessionRequest } from '../actions/auth_action';
-import { RootState } from '../../../redux/combine_reducers';
+import { RootState, AppDispatch } from '../../../redux/combine_reducers';
 import { AuthScreen } from '../screens/auth_screen';
-import { ThunkDispatch } from 'redux-thunk';
 
 const mapState = ({ authReducer }: RootState) => ({
   isAuthenticated: authReducer.isAuthenticated,
@@ -12,7 +10,7 @@ const mapState = ({ authReducer }: RootState) => ({
   success: authReducer.success
 });
 
-const mapDispatch = (dispatch: ThunkDispatch<RootState, void, Action>) => ({
+const mapDispatch = (dispatch: AppDispatch) => ({
   createGuestSessionRequest: () => dispatch(createGuestSessionRequest)
 });
 

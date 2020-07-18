@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Image,
@@ -6,12 +6,17 @@ import {
   Platform,
   KeyboardAvoidingView
 } from 'react-native';
-import { TextInput, Button } from 'react-native-paper';
+import { TextInput, Button, HelperText } from 'react-native-paper';
 
 import { styles, spacer } from '../styles/auth_style';
 import { AuthScreenProps } from '../../../routes/types';
 import { ScreenName } from '../../../utils/constant';
 import images from '../../../utils/images';
+
+interface IErrInput {
+  username?: string;
+  password?: string;
+}
 
 const AuthScreen = ({
   navigation,
@@ -19,6 +24,10 @@ const AuthScreen = ({
   loading,
   isAuthenticated
 }: AuthScreenProps) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errInput, setErrInput] = useState<IErrInput>({});
+
   useEffect(() => {
     if (isAuthenticated) {
       navigation.reset({
@@ -31,6 +40,19 @@ const AuthScreen = ({
       });
     }
   }, [isAuthenticated]);
+
+  useEffect(() => {
+    let errorInput = errInput;
+    if (username) {
+      errorInput.username = '';
+    }
+
+    if (password) {
+      errorInput.password = '';
+    }
+
+    setErrInput(errorInput);
+  }, [username, password]);
 
   const goToDashboard = () => {
     navigation.reset({
@@ -45,6 +67,35 @@ const AuthScreen = ({
 
   const onGuest = () => {
     createGuestSessionRequest();
+  };
+
+  const validateOnPressLogin = (): boolean => {
+    let valid = true;
+    let errorInput: IErrInput = {};
+
+    if (username === '' || !username) {
+      valid = false;
+      errorInput.username = "Username can't be empty";
+    }
+
+    if (password === '' || !password) {
+      valid = false;
+      errorInput.password = "Password can't be empty";
+    }
+
+    if (valid) {
+      return true;
+    }
+
+    setErrInput(errorInput);
+    return false;
+  };
+
+  const onLogin = () => {
+    const valid = validateOnPressLogin();
+    if (valid) {
+      goToDashboard();
+    }
   };
 
   return (
@@ -65,7 +116,14 @@ const AuthScreen = ({
             colors: { primary: '#90cea1', placeholder: '#90cea1', text: '#FFF' }
           }}
           style={styles.input}
+          value={username}
+          onChangeText={(value) => setUsername(value)}
         />
+        {!!errInput?.username && (
+          <HelperText type="error" style={styles.errMessage}>
+            {errInput?.username}
+          </HelperText>
+        )}
         <View style={spacer(16).space} />
         <TextInput
           label="Password"
@@ -75,7 +133,15 @@ const AuthScreen = ({
             colors: { primary: '#90cea1', placeholder: '#90cea1', text: '#FFF' }
           }}
           style={styles.input}
+          value={password}
+          onChangeText={(value) => setPassword(value)}
+          secureTextEntry
         />
+        {!!errInput?.password && (
+          <HelperText type="error" style={styles.errMessage}>
+            {errInput?.password}
+          </HelperText>
+        )}
         <View style={spacer(40).space} />
         <Button
           uppercase={false}
@@ -88,7 +154,7 @@ const AuthScreen = ({
           mode="contained"
           style={styles.btnLogin}
           contentStyle={styles.button}
-          onPress={goToDashboard}>
+          onPress={onLogin}>
           Log in
         </Button>
         <View style={spacer(16).space} />
