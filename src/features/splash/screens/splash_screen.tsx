@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, StatusBar } from 'react-native';
+import { View, StatusBar, Platform } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import SplashScreens from 'react-native-splash-screen';
 
@@ -11,7 +11,10 @@ import images from '../../../utils/images';
 
 const SplashScreen = ({ navigation, isAuthenticated }: SplashScreenProps) => {
   useEffect(() => {
-    StatusBar.setBackgroundColor('#0d253f');
+    if (Platform.OS === 'android') {
+      StatusBar.setBackgroundColor('#0d253f');
+    }
+
     StatusBar.setBarStyle('light-content');
     SplashScreens.hide();
     redirect();
