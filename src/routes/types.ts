@@ -11,6 +11,7 @@ export type RootStackParamList = {
   ProfileScreen: undefined;
   HomeScreen: undefined;
   MovieScreen: { item: MovieType };
+  SearchScreen: undefined;
 };
 
 interface SplashStateProps {
@@ -86,3 +87,20 @@ export type MovieScreenProps = {
   route: MovieScreenRouteProp;
   genres: GenreType[];
 };
+
+interface SearchDispatchProps {
+  loading: boolean;
+  success: boolean;
+  page: number;
+  totalPages: number;
+  errorMessage: string;
+  movies: MovieType[];
+  searchMovie: (page: number, query: string) => void;
+  genres: GenreType[];
+}
+
+export type SearchScreenProps = StackScreenProps<
+  RootStackParamList,
+  ScreenName.searchScreen
+> &
+  SearchDispatchProps;

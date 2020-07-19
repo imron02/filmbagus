@@ -11,6 +11,7 @@ import images from '../../../utils/images';
 
 const SplashScreen = ({ navigation, isAuthenticated }: SplashScreenProps) => {
   useEffect(() => {
+    StatusBar.setBackgroundColor('#0d253f');
     StatusBar.setBarStyle('light-content');
     SplashScreens.hide();
     redirect();

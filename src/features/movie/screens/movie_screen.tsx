@@ -50,7 +50,7 @@ const MovieScreen = ({ route, genres }: MovieScreenProps) => {
       <ScrollView style={styles.contentWrapper}>
         <Animatable.Image
           animation="fadeInDownBig"
-          duration={1300}
+          duration={500}
           easing="ease-in"
           source={{
             uri: `${ApiConfig.datastore}w1280${imagePath}`

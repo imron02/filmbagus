@@ -11,7 +11,7 @@ import FastImage from 'react-native-fast-image';
 
 import { styles } from '../styles/home_style';
 import { AppBarComponent } from '../../../components/app_bar/app_bar_component';
-import { HomeScreenProps } from 'src/routes/types';
+import { HomeScreenProps } from '../../../routes/types';
 import { ApiConfig, ScreenName } from '../../../utils/constant';
 import { MovieType } from '../reducers/types';
 
