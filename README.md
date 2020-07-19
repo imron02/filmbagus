@@ -43,6 +43,11 @@ For android :
 $ yarn clean:android
 ```
 
+#### Unit test
+```sh
+$ yarn test
+```
+
 #### Demo account
 ```bash
 username: Imron02
