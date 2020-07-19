@@ -9,7 +9,9 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "postinstall": "npx pod-install",
-    "reset": "react-native start --reset-cache"
+    "reset": "react-native start --reset-cache",
+    "clean:android": "cd android && ./gradlew clean && cd ../",
+    "clean:ios": "cd ios && xcodebuild clean && cd ../"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.11.0",
