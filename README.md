@@ -17,7 +17,6 @@ $ cd filmbagus
 $ yarn install
 ```
 
-
 #### Build and running for iOS
 Command:
 ```sh
@@ -42,4 +41,10 @@ $ yarn clean:ios
 For android :
 ```sh
 $ yarn clean:android
+```
+
+#### Demo account
+```bash
+username: Imron02
+password: Superadmin1234567
 ```
