@@ -131,7 +131,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.film_bagus_v2"
+        applicationId "com.filmbagus"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

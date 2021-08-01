@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "film_bagus_v2.app"
-               BlueprintName = "film_bagus_v2"
-               ReferencedContainer = "container:film_bagus_v2.xcodeproj">
+               BuildableName = "filmbagus.app"
+               BlueprintName = "filmbagus"
+               ReferencedContainer = "container:filmbagus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "film_bagus_v2Tests.xctest"
-               BlueprintName = "film_bagus_v2Tests"
-               ReferencedContainer = "container:film_bagus_v2.xcodeproj">
+               BuildableName = "filmbagusTests.xctest"
+               BlueprintName = "filmbagusTests"
+               ReferencedContainer = "container:filmbagus.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "film_bagus_v2.app"
-            BlueprintName = "film_bagus_v2"
-            ReferencedContainer = "container:film_bagus_v2.xcodeproj">
+            BuildableName = "filmbagus.app"
+            BlueprintName = "filmbagus"
+            ReferencedContainer = "container:filmbagus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "film_bagus_v2.app"
-            BlueprintName = "film_bagus_v2"
-            ReferencedContainer = "container:film_bagus_v2.xcodeproj">
+            BuildableName = "filmbagus.app"
+            BlueprintName = "filmbagus"
+            ReferencedContainer = "container:filmbagus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

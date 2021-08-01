@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* film_bagus_v2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* film_bagus_v2Tests.m */; };
+		00E356F31AD99517003FC87E /* filmbagusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* filmbagusTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		28B8FC100D964EA797471F05 /* libPods-film_bagus_v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E35F668F1147B8A06749C32 /* libPods-film_bagus_v2.a */; };
-		5B490B831CA29D9750988CA3 /* libPods-film_bagus_v2-film_bagus_v2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4AAA1BD6C1C252B8574C19 /* libPods-film_bagus_v2-film_bagus_v2Tests.a */; };
+		28B8FC100D964EA797471F05 /* libPods-filmbagus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E35F668F1147B8A06749C32 /* libPods-filmbagus.a */; };
+		5B490B831CA29D9750988CA3 /* libPods-filmbagus-filmbagusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4AAA1BD6C1C252B8574C19 /* libPods-filmbagus-filmbagusTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -22,27 +22,27 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = film_bagus_v2;
+			remoteInfo = filmbagus;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* film_bagus_v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = film_bagus_v2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* filmbagusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = filmbagusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* film_bagus_v2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = film_bagus_v2Tests.m; sourceTree = "<group>"; };
-		13113F9963582518A35E6F26 /* Pods-film_bagus_v2-film_bagus_v2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-film_bagus_v2-film_bagus_v2Tests.release.xcconfig"; path = "Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* film_bagus_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = film_bagus_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = film_bagus_v2/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = film_bagus_v2/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = film_bagus_v2/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = film_bagus_v2/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = film_bagus_v2/main.m; sourceTree = "<group>"; };
-		2214104BB9BE426CEC0C7C01 /* Pods-film_bagus_v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-film_bagus_v2.release.xcconfig"; path = "Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2.release.xcconfig"; sourceTree = "<group>"; };
-		48D348A0EADE474D9DF8E357 /* Pods-film_bagus_v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-film_bagus_v2.debug.xcconfig"; path = "Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = film_bagus_v2/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E35F668F1147B8A06749C32 /* libPods-film_bagus_v2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-film_bagus_v2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF4AAA1BD6C1C252B8574C19 /* libPods-film_bagus_v2-film_bagus_v2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-film_bagus_v2-film_bagus_v2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBB58F159D10E11C2750302B /* Pods-film_bagus_v2-film_bagus_v2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-film_bagus_v2-film_bagus_v2Tests.debug.xcconfig"; path = "Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* filmbagusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = filmbagusTests.m; sourceTree = "<group>"; };
+		13113F9963582518A35E6F26 /* Pods-filmbagus-filmbagusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-filmbagus-filmbagusTests.release.xcconfig"; path = "Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* filmbagus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = filmbagus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = filmbagus/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = filmbagus/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = filmbagus/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = filmbagus/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = filmbagus/main.m; sourceTree = "<group>"; };
+		2214104BB9BE426CEC0C7C01 /* Pods-filmbagus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-filmbagus.release.xcconfig"; path = "Target Support Files/Pods-filmbagus/Pods-filmbagus.release.xcconfig"; sourceTree = "<group>"; };
+		48D348A0EADE474D9DF8E357 /* Pods-filmbagus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-filmbagus.debug.xcconfig"; path = "Target Support Files/Pods-filmbagus/Pods-filmbagus.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = filmbagus/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E35F668F1147B8A06749C32 /* libPods-filmbagus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-filmbagus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF4AAA1BD6C1C252B8574C19 /* libPods-filmbagus-filmbagusTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-filmbagus-filmbagusTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB58F159D10E11C2750302B /* Pods-filmbagus-filmbagusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-filmbagus-filmbagusTests.debug.xcconfig"; path = "Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B490B831CA29D9750988CA3 /* libPods-film_bagus_v2-film_bagus_v2Tests.a in Frameworks */,
+				5B490B831CA29D9750988CA3 /* libPods-filmbagus-filmbagusTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,20 +59,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B8FC100D964EA797471F05 /* libPods-film_bagus_v2.a in Frameworks */,
+				28B8FC100D964EA797471F05 /* libPods-filmbagus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* film_bagus_v2Tests */ = {
+		00E356EF1AD99517003FC87E /* filmbagusTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* film_bagus_v2Tests.m */,
+				00E356F21AD99517003FC87E /* filmbagusTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = film_bagus_v2Tests;
+			path = filmbagusTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -83,7 +83,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* film_bagus_v2 */ = {
+		13B07FAE1A68108700A75B9A /* filmbagus */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -93,15 +93,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = film_bagus_v2;
+			name = filmbagus;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				8E35F668F1147B8A06749C32 /* libPods-film_bagus_v2.a */,
-				BF4AAA1BD6C1C252B8574C19 /* libPods-film_bagus_v2-film_bagus_v2Tests.a */,
+				8E35F668F1147B8A06749C32 /* libPods-filmbagus.a */,
+				BF4AAA1BD6C1C252B8574C19 /* libPods-filmbagus-filmbagusTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,10 +109,10 @@
 		5A752BBA77BE01C6F73D3D68 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				48D348A0EADE474D9DF8E357 /* Pods-film_bagus_v2.debug.xcconfig */,
-				2214104BB9BE426CEC0C7C01 /* Pods-film_bagus_v2.release.xcconfig */,
-				CBB58F159D10E11C2750302B /* Pods-film_bagus_v2-film_bagus_v2Tests.debug.xcconfig */,
-				13113F9963582518A35E6F26 /* Pods-film_bagus_v2-film_bagus_v2Tests.release.xcconfig */,
+				48D348A0EADE474D9DF8E357 /* Pods-filmbagus.debug.xcconfig */,
+				2214104BB9BE426CEC0C7C01 /* Pods-filmbagus.release.xcconfig */,
+				CBB58F159D10E11C2750302B /* Pods-filmbagus-filmbagusTests.debug.xcconfig */,
+				13113F9963582518A35E6F26 /* Pods-filmbagus-filmbagusTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -128,9 +128,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* film_bagus_v2 */,
+				13B07FAE1A68108700A75B9A /* filmbagus */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* film_bagus_v2Tests */,
+				00E356EF1AD99517003FC87E /* filmbagusTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				5A752BBA77BE01C6F73D3D68 /* Pods */,
@@ -143,8 +143,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* film_bagus_v2.app */,
-				00E356EE1AD99517003FC87E /* film_bagus_v2Tests.xctest */,
+				13B07F961A680F5B00A75B9A /* filmbagus.app */,
+				00E356EE1AD99517003FC87E /* filmbagusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* film_bagus_v2Tests */ = {
+		00E356ED1AD99517003FC87E /* filmbagusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "film_bagus_v2Tests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "filmbagusTests" */;
 			buildPhases = (
 				731CA38DFB431C49CA7AC785 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -168,14 +168,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = film_bagus_v2Tests;
-			productName = film_bagus_v2Tests;
-			productReference = 00E356EE1AD99517003FC87E /* film_bagus_v2Tests.xctest */;
+			name = filmbagusTests;
+			productName = filmbagusTests;
+			productReference = 00E356EE1AD99517003FC87E /* filmbagusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* film_bagus_v2 */ = {
+		13B07F861A680F5B00A75B9A /* filmbagus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "film_bagus_v2" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "filmbagus" */;
 			buildPhases = (
 				3EC2EB77A8F4CE6AA1C74FBB /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -190,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = film_bagus_v2;
-			productName = film_bagus_v2;
-			productReference = 13B07F961A680F5B00A75B9A /* film_bagus_v2.app */;
+			name = filmbagus;
+			productName = filmbagus;
+			productReference = 13B07F961A680F5B00A75B9A /* filmbagus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "film_bagus_v2" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "filmbagus" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,8 +225,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* film_bagus_v2 */,
-				00E356ED1AD99517003FC87E /* film_bagus_v2Tests */,
+				13B07F861A680F5B00A75B9A /* filmbagus */,
+				00E356ED1AD99517003FC87E /* filmbagusTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +280,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-film_bagus_v2-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-filmbagus-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -293,15 +293,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		731CA38DFB431C49CA7AC785 /* [CP] Check Pods Manifest.lock */ = {
@@ -319,7 +319,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-film_bagus_v2-film_bagus_v2Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-filmbagus-filmbagusTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,15 +332,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus/Pods-filmbagus-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus/Pods-filmbagus-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-filmbagus/Pods-filmbagus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E9E8E788CBD1C74718A4718 /* [CP] Embed Pods Frameworks */ = {
@@ -349,15 +349,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2-film_bagus_v2Tests/Pods-film_bagus_v2-film_bagus_v2Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-filmbagus-filmbagusTests/Pods-filmbagus-filmbagusTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A4402FD861224B24E401A149 /* [CP] Embed Pods Frameworks */ = {
@@ -366,15 +366,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus/Pods-filmbagus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-filmbagus/Pods-filmbagus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-film_bagus_v2/Pods-film_bagus_v2-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-filmbagus/Pods-filmbagus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -403,7 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* film_bagus_v2Tests.m in Sources */,
+				00E356F31AD99517003FC87E /* filmbagusTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +421,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* film_bagus_v2 */;
+			target = 13B07F861A680F5B00A75B9A /* filmbagus */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -429,14 +429,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBB58F159D10E11C2750302B /* Pods-film_bagus_v2-film_bagus_v2Tests.debug.xcconfig */;
+			baseConfigurationReference = CBB58F159D10E11C2750302B /* Pods-filmbagus-filmbagusTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = film_bagus_v2Tests/Info.plist;
+				INFOPLIST_FILE = filmbagusTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,17 +450,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/film_bagus_v2.app/film_bagus_v2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/filmbagus.app/filmbagus";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13113F9963582518A35E6F26 /* Pods-film_bagus_v2-film_bagus_v2Tests.release.xcconfig */;
+			baseConfigurationReference = 13113F9963582518A35E6F26 /* Pods-filmbagus-filmbagusTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = film_bagus_v2Tests/Info.plist;
+				INFOPLIST_FILE = filmbagusTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,19 +474,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/film_bagus_v2.app/film_bagus_v2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/filmbagus.app/filmbagus";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48D348A0EADE474D9DF8E357 /* Pods-film_bagus_v2.debug.xcconfig */;
+			baseConfigurationReference = 48D348A0EADE474D9DF8E357 /* Pods-filmbagus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = film_bagus_v2/Info.plist;
+				INFOPLIST_FILE = filmbagus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,7 +497,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = film_bagus_v2;
+				PRODUCT_NAME = filmbagus;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -506,12 +506,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2214104BB9BE426CEC0C7C01 /* Pods-film_bagus_v2.release.xcconfig */;
+			baseConfigurationReference = 2214104BB9BE426CEC0C7C01 /* Pods-filmbagus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = film_bagus_v2/Info.plist;
+				INFOPLIST_FILE = filmbagus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +522,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = film_bagus_v2;
+				PRODUCT_NAME = filmbagus;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -654,7 +654,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "film_bagus_v2Tests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "filmbagusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -663,7 +663,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "film_bagus_v2" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "filmbagus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -672,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "film_bagus_v2" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "filmbagus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
