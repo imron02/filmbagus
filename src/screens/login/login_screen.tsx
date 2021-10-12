@@ -3,15 +3,16 @@ import { Form } from 'component/form';
 import HeaderComponent from 'component/header/header_component';
 import LayoutComponent from 'component/layout/layout_component';
 import TextComponent from 'component/text_component';
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import { Image, View } from 'react-native';
 import styled from 'styled-components';
 import { ColorEnum } from 'utils/colors';
 import { SizeEnum } from 'utils/size';
 import { useFormik } from 'formik';
 import { LoginSchema } from 'utils/validator_schema';
+import AuthContext from 'context/auth_context';
 
-interface LoginInterface {
+export interface LoginInterface {
   username: string;
   password: string;
 }
@@ -30,7 +31,11 @@ const SpacerStyled = styled(View)`
 const LoginInitialValue: LoginInterface = { username: '', password: '' };
 
 const FormLogin = memo(() => {
-  const onSubmit = () => {};
+  const { signIn } = useContext(AuthContext);
+
+  const onSubmit = () => {
+    signIn(values);
+  };
 
   const { values, handleChange, touched, errors, handleBlur, handleSubmit, isValid, dirty } =
     useFormik({
