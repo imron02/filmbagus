@@ -1,0 +1,15 @@
+## ignore snapshot test
+*.tsx.snap
+android
+ios
+dist
+yarn.lock
+
+.gitattributes
+.gitignore
+.git
+.prettierignore
+.env
+.buckconfig
+
+coverage
