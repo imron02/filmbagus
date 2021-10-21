@@ -3,7 +3,7 @@ import { Form } from 'component/form';
 import HeaderComponent from 'component/header/header_component';
 import LayoutComponent from 'component/layout/layout_component';
 import TextComponent from 'component/text_component';
-import React, { memo, useContext } from 'react';
+import React, { memo, useContext, useState } from 'react';
 import { Image, View } from 'react-native';
 import styled from 'styled-components';
 import { ColorEnum } from 'utils/colors';
@@ -32,9 +32,12 @@ const LoginInitialValue: LoginInterface = { username: '', password: '' };
 
 const FormLogin = memo(() => {
   const { signIn } = useContext(AuthContext);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = () => {
-    signIn(values);
+  const onSubmit = async () => {
+    setIsLoading(true);
+    await signIn(values);
+    setIsLoading(false);
   };
 
   const { values, handleChange, touched, errors, handleBlur, handleSubmit, isValid, dirty } =
@@ -67,6 +70,7 @@ const FormLogin = memo(() => {
         onPress={handleSubmit}
         accessibilityLabel="btnSignIn"
         disabled={!isValid || !dirty}
+        loading={isLoading}
       />
     </>
   );
